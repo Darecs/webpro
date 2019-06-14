@@ -18,4 +18,5 @@ from catalog import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('overview/', views.overview, name='overview')
 ]
