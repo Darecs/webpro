@@ -18,5 +18,8 @@ from catalog import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('overview/', views.overview, name='overview')
+    path('dnac/', views.dnac, name='dnac'),
+    path('meraki/', views.meraki, name='meraki'),
+    path('iosxe/', views.iosxe, name='iosxe'),
+    path('sdwan/', views.sdwan, name='sdwan'),
 ]

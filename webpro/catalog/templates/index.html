@@ -1,2 +1,8 @@
-<a href="{% url 'index' %}">Home</a>.
-<a href="{% url 'overview' %}">Overview</a>.
+{% extends "base.html" %}
+
+{% block content %}
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong><a href="{% url 'index' %}">Home</a></li>
+  </ul>
+{% endblock %}
