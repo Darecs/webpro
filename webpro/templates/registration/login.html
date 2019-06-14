@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h1>Login</h1>
 
 {% if form.errors %}
   <p>Your username and password didn't match. Please try again.</p>
@@ -20,12 +21,12 @@
 <table>
 
 <tr>
-  <td>{{ form.username.label_tag }}</td>
+  <td height="40" width="80">{{ form.username.label_tag }}</td>
   <td>{{ form.username }}</td>
 </tr>
 
 <tr>
-  <td>{{ form.password.label_tag }}</td>
+  <td height="40" width="80">{{ form.password.label_tag }}</td>
   <td>{{ form.password }}</td>
 </tr>
 </table>
