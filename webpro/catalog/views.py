@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
@@ -11,6 +12,7 @@ def index(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
 
+@login_required
 def dnac(request):
     """View function for home page of site."""
     
@@ -21,6 +23,7 @@ def dnac(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/dnac.html', context=context)
 
+@login_required
 def meraki(request):
     """View function for home page of site."""
     
@@ -31,6 +34,7 @@ def meraki(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/meraki.html', context=context)
 
+@login_required
 def iosxe(request):
     """View function for home page of site."""
     
@@ -41,6 +45,7 @@ def iosxe(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/iosxe.html', context=context)
 
+@login_required
 def sdwan(request):
     """View function for home page of site."""
     
