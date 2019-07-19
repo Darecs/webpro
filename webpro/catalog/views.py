@@ -1,5 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+import catalog.environment.dnac_api_dispatcher as dna
+import json
+
+# Temp bis Authentifizierung ausgelagert wird
+dna_login_token =  dna.dnac_login(dna.dnac["host"], dna.dnac["username"], dna.dnac["password"])
 
 # Create your views here.
 def index(request):
@@ -15,13 +20,37 @@ def index(request):
 @login_required
 def dnac(request):
     """View function for home page of site."""
-    
     context = {
         
     }
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/dnac.html', context=context)
+
+@login_required
+def dnac_api1(request):
+    """View function for home page of site."""
+
+    device_list_raw = dna.network_device_list(dna.dnac, dna_login_token)
+    device_list = device_list_raw["response"] 
+    context = {
+        'device_list': device_list
+    }
+
+    # Render the HTML template index.html with the data in the context variable
+    return render(request, 'applications/dnac/dnac_api1.html', context=context)
+
+@login_required
+def dnac_api2(request):
+    """View function for home page of site."""
+
+    device_count = dna.device_count(dna.dnac, dna_login_token)
+    context = {
+        'device_count': device_count
+    }
+
+    # Render the HTML template index.html with the data in the context variable
+    return render(request, 'applications/dnac/dnac_api2.html', context=context)
 
 @login_required
 def meraki(request):

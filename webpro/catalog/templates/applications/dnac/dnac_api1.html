@@ -1,0 +1,25 @@
+{% extends "dnac_base.html" %}
+
+{% block content %}
+<h2>List all Devices managed by DNA Center</h2>
+
+<table class="table table-striped" >
+    <tr>
+        <th>Device Type</th>
+        <th>Device Family</th>
+        <th>Serial Number</th>
+        <th>Hostname</th>
+        <th>Software Version</th>
+    </tr>
+    {% for device in device_list %}
+    <tr> 
+        <td><p>{{ device.type }}</p></td>
+        <td><p>{{ device.family }}</p></td>
+        <td><p>{{ device.serialNumber }}</p></td>
+        <td><p>{{ device.hostname }}</p></td>
+        <td><p>{{ device.softwareVersion }}</p></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

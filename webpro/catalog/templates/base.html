@@ -10,6 +10,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style>
 
+        h2  {
+            padding-bottom: 40px;
+        }
+
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
             margin-bottom: 0;
@@ -23,9 +27,11 @@
 
         /* Set gray background color and 100% height */
         .sidenav {
-            padding-top: 20px;
+            padding-top: 10px;
+            min-width: 170px;
             background-color: #f1f1f1;
             height: 100%;
+            width: 10%;
         }
 
         /* Set black background color, white text and some padding */
@@ -44,6 +50,7 @@
 
             .row.content {
                 height: auto;
+                
             }
         }
     </style>
@@ -83,10 +90,10 @@
         </div>
     </nav>
 
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-left">
         <div class="row content">
-            <div class="col-sm-2 sidenav">
-                <div class="col-sm-2 sidenav">
+            <div class="col-sm-8 sidenav">
+                <div class="col-sm-8 sidenav">
                     {% block sidebar %}{% endblock %}
                 </div>
             </div>

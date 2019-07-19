@@ -41,7 +41,6 @@ PREREQ_APPS = [
 
 PROJECT_APPS = [
     'catalog.apps.CatalogConfig',
-    'user.apps.UserConfig',
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS
