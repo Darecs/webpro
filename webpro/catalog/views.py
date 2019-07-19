@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-import catalog.environment.dnac_api_dispatcher as dna
+import catalog.dispatcher.dnac_api_dispatcher as dna
 import json
 
 # Temp bis Authentifizierung ausgelagert wird
