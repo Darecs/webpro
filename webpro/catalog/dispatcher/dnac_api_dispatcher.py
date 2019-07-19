@@ -15,10 +15,10 @@ if ENVIRONMENT_IN_USE == "sandbox":
     }
 elif ENVIRONMENT_IN_USE =="development":
      dnac = {
-        "host": "10.100.104.15",
+        "host": "XXXXX",
         "port": 443,
         "username": "admin",
-        "password": "Voice2LAN!"
+        "password": "XXXX"
     }
 
 # Silence the insecure warning due to SSL Certificate
