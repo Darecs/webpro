@@ -46,7 +46,3 @@ def device_count(dnac, token):
     headers["x-auth-token"] = token
     response = requests.get(url, headers=headers, verify=False)
     return response.json()
-
-
-# login_token = dnac_login(dnac["host"], dnac["username"], dnac["password"])
-# print(network_device_list(dnac, login_token)['response'])

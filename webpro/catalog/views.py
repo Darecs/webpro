@@ -13,8 +13,6 @@ def index(request):
     context = {
         
     }
-
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
 
 @login_required
@@ -23,8 +21,6 @@ def dnac(request):
     context = {
         
     }
-
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/dnac.html', context=context)
 
 @login_required
@@ -36,8 +32,6 @@ def dnac_api1(request):
     context = {
         'device_list': device_list
     }
-
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/dnac/dnac_api1.html', context=context)
 
 @login_required
@@ -48,8 +42,6 @@ def dnac_api2(request):
     context = {
         'device_count': device_count
     }
-
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/dnac/dnac_api2.html', context=context)
 
 @login_required
@@ -59,8 +51,6 @@ def meraki(request):
     context = {
         
     }
-
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/meraki.html', context=context)
 
 @login_required
@@ -70,8 +60,6 @@ def iosxe(request):
     context = {
         
     }
-
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/iosxe.html', context=context)
 
 @login_required
@@ -81,6 +69,4 @@ def sdwan(request):
     context = {
         
     }
-
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'applications/sdwan.html', context=context)
