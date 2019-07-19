@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block sidebar %}
+<a href="{% url 'dnac_login' %}">DNA Center Login</a>
 <h3>Tests</h3>
 <a href="{% url 'dnac_api1' %}">Show Device List</a>
 <p><a href="{% url 'dnac_api2' %}">Show Device Count</a></p>

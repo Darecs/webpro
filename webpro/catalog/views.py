@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 import catalog.dispatcher.dnac_api_dispatcher as dna
 import json
+from .models import dna_center
 
 # Temp bis Authentifizierung ausgelagert wird
 dna_login_token =  dna.dnac_login(dna.dnac["host"], dna.dnac["username"], dna.dnac["password"])
@@ -22,6 +23,16 @@ def dnac(request):
         
     }
     return render(request, 'applications/dnac.html', context=context)
+
+@login_required
+def dnac_login(request):
+    """View function for home page of site."""
+
+    
+    context = {
+        'dna_center': dna_center
+    }
+    return render(request, 'applications/dnac/dnac_login.html', context=context)
 
 @login_required
 def dnac_api1(request):
