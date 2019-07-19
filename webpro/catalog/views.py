@@ -40,6 +40,7 @@ def dnac_api1(request):
 
     device_list_raw = dna.network_device_list(dna.dnac, dna_login_token)
     device_list = device_list_raw["response"] 
+    # print(device_list[0]["type"])
     context = {
         'device_list': device_list
     }
