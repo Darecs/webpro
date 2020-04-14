@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Overview </h1>
+<p>The API library has the following record counts:</p>
+<ul>
+  <li><strong><a href="{% url 'index' %}">Home</a></li>
+  <li><strong></strong><a href="{% url 'dnac' %}">DNA-Center</a></li>
+  <li><strong></strong><a href="{% url 'meraki' %}">Meraki</a></li>
+  <li><strong></strong><a href="{% url 'iosxe' %}">IOS-XE</a></li>
+  <li><strong></strong><a href="{% url 'sdwan' %}">SD-WAN</a></li>
+</ul>
+{% endblock %}
