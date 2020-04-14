@@ -22,7 +22,7 @@ def dnac(request):
     context = {
         
     }
-    return render(request, 'applications/dnac.html', context=context)
+    return render(request, 'dnac_base.html', context=context)
 
 @login_required
 def dnac_login(request):
